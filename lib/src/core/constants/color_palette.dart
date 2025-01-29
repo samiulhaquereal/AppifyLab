@@ -1,8 +1,12 @@
 import 'package:appifylabtask/src/config/import/imports.dart';
 
 abstract class AppColors {
-  static Color primaryColor = ColorParse().parseColor('001E6C');
-  static Color secondaryColor = ColorParse().parseColor('0078E6');
+
+  static Color primaryColor = ColorParse().parseColor('105a64');
+  static Color secondaryColor = ColorParse().parseColor('48E5A9');
+  static Color loginFormBorderColor = ColorParse().parseColor('023d45');
+  static Color loginFormLabelColor = ColorParse().parseColor('F5F5FF');
+  static Color loginButtonBackGroundColor = ColorParse().parseColor('e8f54a');
   static Color whiteColor = ColorParse().parseColor('FFFFFF');
   static Color blackColor = ColorParse().parseColor('000000');
   static const Color grayColor = Colors.grey;

@@ -7,6 +7,7 @@ abstract class AppStrings {
   static const String pageNotFoundMessage = '''We're sorry, the page you requested could not be found. Please go back.''';
   static const String somethingWrongMessage = 'Something went wrong';
   static const String back = 'Back';
+  static const String login = 'Login';
 }
 
 

@@ -3,7 +3,7 @@ import 'package:appifylabtask/src/config/import/imports.dart';
 
 mixin StyleMixin {
 
-   TextStyle get primaryTextStyle =>  GoogleFonts.poppins(
+   TextStyle get primaryTextStyle =>  GoogleFonts.figtree(
        color: AppColors.primaryColor,
        fontSize: 10.sp,
    );
@@ -34,6 +34,13 @@ mixin StyleMixin {
    TextStyle get splashScreenTextStyle => primaryTextStyle.copyWith(
        fontSize: 17.sp,
        fontWeight: FontWeight.w700
+   );
+
+   ButtonStyle get buttonStyle => ElevatedButton.styleFrom(
+     backgroundColor: AppColors.loginButtonBackGroundColor,
+     shape: RoundedRectangleBorder(
+       borderRadius: BorderRadius.circular(5.r),
+     ),
    );
 
 

@@ -1,4 +1,6 @@
 import 'package:appifylabtask/src/config/import/imports.dart';
+import 'package:appifylabtask/src/features/authentication/login/bindings/login_binding.dart';
+import 'package:appifylabtask/src/features/authentication/login/screen/login_screen.dart';
 
 class AppPages {
   AppPages._();
@@ -21,6 +23,11 @@ class AppPages {
         transition: Transition.fadeIn,
         preventDuplicates: true,
         fullscreenDialog: true,
+    ),
+    GetPage(
+      name: Routes.getLoginRoute(),
+      page: ()=> LoginScreen(),
+      binding:LoginBinding(),
     ),
     GetPage(
         name: Routes.getDashboardRoute(),

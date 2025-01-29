@@ -51,3 +51,8 @@ export 'package:appifylabtask/src/features/main_modules/splash/controller/splash
 export 'package:appifylabtask/src/core/base/base_widget.dart';
 export 'package:appifylabtask/src/features/main_modules/splash/bindings/splash_binding.dart';
 export 'package:appifylabtask/src/features/main_modules/splash/screen/splash_screen.dart';
+export 'package:appifylabtask/src/features/authentication/login/controller/login_controller.dart';
+export 'package:appifylabtask/src/core/widgets/asset_image_view.dart';
+export 'package:appifylabtask/src/core/constants/asset_paths.dart';
+export 'package:appifylabtask/src/core/widgets/textfield_widget.dart';
+export 'package:flutter_screenutil/flutter_screenutil.dart';
