@@ -59,3 +59,5 @@ export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:get_storage/get_storage.dart';
 export 'package:appifylabtask/src/network/endpoints_string.dart';
 export 'package:appifylabtask/src/core/utils/session_manager/session_manager.dart';
+export 'package:appifylabtask/src/features/main_modules/feed/controller/feed_controller.dart';
+export 'package:appifylabtask/src/features/main_modules/create_post/controller/create_post_controller.dart';
