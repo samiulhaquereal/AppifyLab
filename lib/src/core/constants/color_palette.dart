@@ -7,6 +7,8 @@ abstract class AppColors {
   static Color loginFormBorderColor = ColorParse().parseColor('023d45');
   static Color loginFormLabelColor = ColorParse().parseColor('F5F5FF');
   static Color loginButtonBackGroundColor = ColorParse().parseColor('e8f54a');
+  static Color navBarSelectedColor = ColorParse().parseColor('004852');
+  static Color navBarUnSelectedColor = ColorParse().parseColor('141B34');
   static Color whiteColor = ColorParse().parseColor('FFFFFF');
   static Color blackColor = ColorParse().parseColor('000000');
   static const Color grayColor = Colors.grey;

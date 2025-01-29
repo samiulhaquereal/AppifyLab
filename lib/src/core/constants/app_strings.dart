@@ -8,6 +8,8 @@ abstract class AppStrings {
   static const String somethingWrongMessage = 'Something went wrong';
   static const String back = 'Back';
   static const String login = 'Login';
+  static const String community = 'Community';
+  static const String logout = 'Logout';
 }
 
 

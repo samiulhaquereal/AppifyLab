@@ -1,4 +1,3 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:appifylabtask/src/config/import/imports.dart';
 
 mixin StyleMixin {
@@ -10,6 +9,16 @@ mixin StyleMixin {
 
    TextStyle get secondaryTextStyle =>  primaryTextStyle.copyWith(
        color: AppColors.blackColor,
+   );
+
+   TextStyle get naBarSelectedTextStyle =>  primaryTextStyle.copyWith(
+     color: AppColors.navBarSelectedColor,
+     fontSize: 12.sp,
+   );
+
+   TextStyle get naBarUnSelectedTextStyle =>  primaryTextStyle.copyWith(
+     color: AppColors.navBarUnSelectedColor,
+     fontSize: 12.sp,
    );
 
    TextStyle get headerTextStyle => primaryTextStyle.copyWith(
