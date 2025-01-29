@@ -43,11 +43,11 @@ android {
             dimension "default"
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
-            resValue "string", "app_name", "StackFood-Dev"
+            resValue "string", "app_name", "Ezycourse-Dev"
         }
         prod {
             dimension "default"
-            resValue "string", "app_name", "StackFood"
+            resValue "string", "app_name", "Ezycourse"
         }
     }
 }
