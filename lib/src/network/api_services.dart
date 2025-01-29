@@ -10,16 +10,18 @@ class ApiServices {
   }
   final _restApiClient = RestApi();
 
-  /*Future<Map<String, dynamic>?> userLogin({required String data}) async {
+  Future<Map<String, dynamic>?> userLogin({required String email,required String password}) async {
     final response = await _restApiClient.post(
-        baseURL: AppEnvironment.environment == Environment.development ? baseUrlDev : AppEnvironment.baseUrl,
-        endpoint: endpointLogin,
+        baseURL: ApiEndpoints.baseUrlLogin,
+        endpoint: ApiEndpoints.endpointLogin,
         needEncode: false,
         body: {
-          'data': data
+          'email': email,
+          'password': password,
+          'app_token': '',
         }
     );
     return response;
-  }*/
+  }
 
 }

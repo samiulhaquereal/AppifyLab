@@ -15,5 +15,6 @@ void main()async{
   ErrorWidget.builder = (FlutterErrorDetails details)=>SafeArea(child: Scaffold(
     body: CustomErrorWidget(errorMessage: details.exceptionAsString()),
   ));
+  await GetStorage.init();
   runApp(const MyApp());
 }

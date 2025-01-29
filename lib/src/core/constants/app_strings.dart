@@ -1,5 +1,5 @@
 abstract class AppStrings {
-  static const String appName = "Stack Food";
+  static const String appName = "Ezycourse";
   static const String appBetaVersion = "0.0.1";
 
   static const String errorOccurred = 'Error Occurred!';

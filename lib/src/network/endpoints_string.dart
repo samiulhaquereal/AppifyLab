@@ -1,7 +1,8 @@
 import 'package:appifylabtask/src/config/import/imports.dart';
 
 class ApiEndpoints{
-  final baseUrlDev = 'https://staging.spectra-trade.sscl.tech';
-  final apiVersion = '${dotenv.env['API_VERSION']}';
+  static final baseUrlLogin = '${dotenv.env['LOGIN_BASE_URL']}';
+  static final baseUrl = '${dotenv.env['BASE_URL']}';
+  static final endpointLogin = '${dotenv.env['ENDPOINT_LOGIN']}';
 
 }

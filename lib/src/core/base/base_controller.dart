@@ -3,6 +3,7 @@ import 'package:appifylabtask/src/config/import/imports.dart';
 abstract class BaseController extends GetxController {
 
   ApiServices get apiServices => ApiServices();
+  SessionManager get prefs => SessionManager();
   BuildContext? get buildContext => FindContext.getContext();
 
   Future<void> showLoader() async {

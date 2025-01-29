@@ -11,14 +11,31 @@ class LoginScreenController extends BaseController {
     rememberPassword.value = !rememberPassword.value;
   }
 
-  void onTapLogin(){
+  void onTapLogin()async{
+    if(formKey.currentState!.validate()){
+      await dataFetcher(() async {
+        await _loginAuth();
+      });
+    }
+  }
 
+  Future<void> _loginAuth()async{
+    Map<String, dynamic>? response = await apiServices.userLogin(email: emailController.text.trim(), password: passwordController.text.trim());
+    if(response != null && response.isNotEmpty){
+      await prefs.setTokenType(response['response']['type']);
+      await prefs.setToken(response['response']['token']);
+      _navigateToDashboard();
+    }
   }
 
 
   @override
   void onInit()async{
     super.onInit();
+  }
+
+  void _navigateToDashboard(){
+    Get.toNamed(Routes.getDashboardRoute());
   }
 
   /*Future<bool> showAppExitModal() async {
