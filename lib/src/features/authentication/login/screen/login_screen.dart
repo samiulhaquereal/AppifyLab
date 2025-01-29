@@ -15,39 +15,42 @@ class LoginScreen extends BaseView<LoginScreenController> {
 
   @override
   Widget body(BuildContext context) {
-    return Stack(
-      children: [
-        Positioned(
-            top: -20.h,
-            left: 0.w,
-            right: 0.w,
-            child: AssetImageView(fileName: AssetsPath.circleDesign1)),
-        Positioned(
-            top: 90.h,
-            left: 0.w,
-            right: 0.w,
-            child: AssetImageView(fileName: AssetsPath.circleDesign2)),
-        Positioned(
-            top: 80.h,
-            left: 0.w,
-            right: 0.w,
-            child: AssetImageView(fileName: AssetsPath.logoImage,width: 200.w,height: 100.h)),
-        Positioned(
-            top: 300.h,
-            left: 0.w,
-            right: 0.w,
-            child: Container(
-              height: Get.height.h,
-              width: Get.width.w,
-              padding: EdgeInsets.symmetric(horizontal: 20.w),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(topRight: Radius.circular(30.r),topLeft: Radius.circular(30.r)),
-                border: Border.all(color: AppColors.loginFormBorderColor,width: 2.w),
-              ),
-              child: _buildLoginForm(),
-            )
-        )
-      ],
+    return Visibility(
+      visible: !controller.prefs.getIsLogin(),
+      child: Stack(
+        children: [
+          Positioned(
+              top: -20.h,
+              left: 0.w,
+              right: 0.w,
+              child: AssetImageView(fileName: AssetsPath.circleDesign1)),
+          Positioned(
+              top: 90.h,
+              left: 0.w,
+              right: 0.w,
+              child: AssetImageView(fileName: AssetsPath.circleDesign2)),
+          Positioned(
+              top: 80.h,
+              left: 0.w,
+              right: 0.w,
+              child: AssetImageView(fileName: AssetsPath.logoImage,width: 200.w,height: 100.h)),
+          Positioned(
+              top: 300.h,
+              left: 0.w,
+              right: 0.w,
+              child: Container(
+                height: Get.height.h,
+                width: Get.width.w,
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(topRight: Radius.circular(30.r),topLeft: Radius.circular(30.r)),
+                  border: Border.all(color: AppColors.loginFormBorderColor,width: 2.w),
+                ),
+                child: _buildLoginForm(),
+              )
+          )
+        ],
+      ),
     );
   }
 

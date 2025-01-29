@@ -24,6 +24,7 @@ class LoginScreenController extends BaseController {
     if(response != null && response.isNotEmpty){
       await prefs.setTokenType(response['response']['type']);
       await prefs.setToken(response['response']['token']);
+      await prefs.setIsLogin(isLogin: true);
       _navigateToDashboard();
     }
   }
@@ -32,6 +33,7 @@ class LoginScreenController extends BaseController {
   @override
   void onInit()async{
     super.onInit();
+    await prefs.getIsLogin() == true ? _navigateToDashboard() : null ;
   }
 
   void _navigateToDashboard(){

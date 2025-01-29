@@ -21,7 +21,7 @@ abstract class AppEnvironment {
           sessionTimeout = 1800;
           renewSession = 1500;
           debugBanner = true;
-          statusBarColor = AppColors.blackColor;
+          statusBarColor = AppColors.primaryColor;
           statusBarIconColor = Brightness.light;
           break;
         }
@@ -29,7 +29,7 @@ abstract class AppEnvironment {
         title = AppStrings.appName;
         debugBanner = false;
         baseUrl = '${dotenv.env['BASE_URL']}';
-        statusBarColor = AppColors.blackColor;
+        statusBarColor = AppColors.primaryColor;
         statusBarIconColor = Brightness.light;
         break;
       }

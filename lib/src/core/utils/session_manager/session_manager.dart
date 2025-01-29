@@ -22,6 +22,16 @@ class SessionManager {
     }
   }
 
+  Future<void> setIsLogin({
+    required bool isLogin,
+  }) async {
+    prefs.write(prefsIsLogin, isLogin);
+  }
+
+  bool getIsLogin(){
+    return prefs.read(prefsIsLogin) ?? false;
+  }
+
   Future<void> setTokenType(
       String tokenType,
       ) async {
@@ -52,5 +62,7 @@ class SessionManager {
   Future<void> clearSession() async {
     //await prefs.erase();
     await prefs.remove(prefTokenType);
+    await prefs.remove(prefToken);
+    await prefs.remove(prefsIsLogin);
   }
 }
