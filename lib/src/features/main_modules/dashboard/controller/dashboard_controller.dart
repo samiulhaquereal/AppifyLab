@@ -25,10 +25,13 @@ class DashboardScreenController extends BaseController {
     await dataFetcher(()async{
       await apiServices.logout(tokenType: await prefs.getTokenType(), token: await prefs.getToken());
       prefs.clearSession();
+      _navigateToLogin();
     });
   }
 
-
+  void _navigateToLogin(){
+    Get.offAllNamed(Routes.getLoginRoute());
+  }
 
   /*Future<bool> showAppExitModal() async {
     final shouldPop = await dialog.confirm(
