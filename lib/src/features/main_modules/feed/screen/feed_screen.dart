@@ -1,6 +1,5 @@
 import 'package:appifylabtask/src/config/import/imports.dart';
 
-
 class FeedScreen extends BaseWidget<NewsFeedController>{
   FeedScreen({super.key});
 
@@ -14,90 +13,24 @@ class FeedScreen extends BaseWidget<NewsFeedController>{
             Gap(8.h),
             _buildPostCard(),
             Gap(8.h),
-            Obx(()=> ListView.builder(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: controller.newsFeed.length,
-                  itemBuilder: (_,index){
-                  var post = controller.newsFeed[index];
-                    return Card(
-                      margin: EdgeInsets.symmetric(vertical: 8),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      elevation: 2,
-                      child: Padding(
-                        padding: EdgeInsets.all(12),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            // User Info
-                            Row(
-                              children: [
-                                CircleAvatar(
-                                  backgroundImage: CachedNetworkImageProvider(post.user.profilePic),
-                                ),
-                                SizedBox(width: 10),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(post.user.fullName, style: TextStyle(fontWeight: FontWeight.bold)),
-                                    Text(FormatedDate().formatTime(post.createdAt), style: TextStyle(color: Colors.grey, fontSize: 12)),
-                                  ],
-                                ),
-                                Spacer(),
-                                Icon(Icons.more_vert, color: Colors.grey),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-
-                            // Post Text
-                            Text(post.feedTxt, style: TextStyle(fontSize: 14)),
-                            SizedBox(height: 10),
-
-                            // Post Actions
-                            Row(
-                              children: [
-                                Icon(Icons.favorite_border, color: Colors.black),
-                                SizedBox(width: 5),
-                                Text("${post.likeCount}"),
-                                SizedBox(width: 20),
-                                Icon(Icons.comment_outlined, color: Colors.black),
-                                SizedBox(width: 5),
-                                Text("${post.commentCount}"),
-                                SizedBox(width: 20),
-                                Icon(Icons.share_outlined, color: Colors.black),
-                                SizedBox(width: 5),
-                                Text("${post.shareCount}"),
-                              ],
-                            ),
-
-                            // Like and Comment Buttons
-                            Divider(),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                TextButton.icon(
-                                  icon: Icon(Icons.thumb_up_alt_outlined, color: Colors.black),
-                                  label: Text("Like"),
-                                  onPressed: () {},
-                                ),
-                                TextButton.icon(
-                                  icon: Icon(Icons.comment_outlined, color: Colors.black),
-                                  label: Text("Comment"),
-                                  onPressed: () {},
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  }
-              )),
+            _buildPostList(),
             Gap(8.h),
           ],
         ),
       ),
     );
+  }
+
+  Widget _buildPostList() {
+    return Obx(()=> ListView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: controller.newsFeed.length,
+                itemBuilder: (_,index){
+                var post = controller.newsFeed[index];
+                  return PostItemCard(post: post);
+                }
+            ));
   }
 
   Widget _buildPostCard() {

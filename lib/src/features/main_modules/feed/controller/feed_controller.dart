@@ -1,6 +1,5 @@
 import 'package:appifylabtask/src/config/import/imports.dart';
 
-
 class NewsFeedController extends BaseController{
 
   TextEditingController postEditingController = TextEditingController();

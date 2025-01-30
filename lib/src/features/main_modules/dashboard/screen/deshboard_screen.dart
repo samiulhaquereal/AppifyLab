@@ -88,7 +88,7 @@ class DashboardScreen extends BaseView<DashboardScreenController> {
                     label: AppStrings.community,
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.create_new_folder_rounded, size: 20.sp),
+                    icon: Icon(Icons.logout_rounded, size: 20.sp),
                     label: AppStrings.logout,
                   ),
                 ],
