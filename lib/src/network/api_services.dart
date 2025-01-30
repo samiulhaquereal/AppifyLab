@@ -41,4 +41,16 @@ class ApiServices {
     return response;
   }
 
+  Future<Map<String, dynamic>?> logout({required String tokenType,required String token}) async {
+    final response = await _restApiClient.post(
+        baseURL: ApiEndpoints.baseUrl,
+        endpoint: ApiEndpoints.endpointLogout,
+        needEncode: false,
+        additionalHeaders: {
+          'Authorization':'$tokenType $token'
+        }
+    );
+    return response;
+  }
+
 }

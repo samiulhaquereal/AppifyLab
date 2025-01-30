@@ -5,7 +5,7 @@ class DashboardScreenController extends BaseController {
   RxInt myIndex = 0.obs;
   List<Widget> screenList = [
     FeedScreen(),
-    Center(child: Text('Logout'))
+    SizedBox()
   ];
 
   @override
@@ -14,8 +14,21 @@ class DashboardScreenController extends BaseController {
   }
 
   void onTapNavigationBar(int index){
-    myIndex.value = index;
+    if (index == 1) {
+      LogoutModal().showLogoutDialog(buildContext!,_logout);
+    } else {
+      myIndex.value = index;
+    }
   }
+
+  void _logout()async{
+    await dataFetcher(()async{
+      await apiServices.logout(tokenType: await prefs.getTokenType(), token: await prefs.getToken());
+      prefs.clearSession();
+    });
+  }
+
+
 
   /*Future<bool> showAppExitModal() async {
     final shouldPop = await dialog.confirm(

@@ -66,3 +66,4 @@ export 'package:appifylabtask/src/core/utils/dateParse/formated_date.dart';
 export 'package:cached_network_image/cached_network_image.dart';
 export 'package:appifylabtask/src/model/post_model.dart';
 export 'package:appifylabtask/src/core/widgets/post_card_item_widget.dart';
+export 'package:appifylabtask/src/core/widgets/modal/logout_modal.dart';
