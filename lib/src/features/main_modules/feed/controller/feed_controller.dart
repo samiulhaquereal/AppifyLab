@@ -22,6 +22,20 @@ class NewsFeedController extends BaseController{
     );
   }
 
+  void onTapLike(String feedId)async{
+    await dataFetcher(()async{
+      await apiServices.postLike(
+          tokenType: await prefs.getTokenType(),
+          token: await prefs.getToken(),
+          feedId: feedId,
+      );
+      _getNewsFeed();
+    });
+  }
+
+  void onTapComment(){
+
+  }
 
     void onTapPost(){
 

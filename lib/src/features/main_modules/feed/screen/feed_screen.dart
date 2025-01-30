@@ -28,7 +28,11 @@ class FeedScreen extends BaseWidget<NewsFeedController>{
               itemCount: controller.newsFeed.length,
                 itemBuilder: (_,index){
                 var post = controller.newsFeed[index];
-                  return PostItemCard(post: post);
+                  return PostItemCard(
+                      post: post,
+                      onTapComment: controller.onTapComment,
+                      onTapLike: ()=> controller.onTapLike(post.id.toString()),
+                  );
                 }
             ));
   }

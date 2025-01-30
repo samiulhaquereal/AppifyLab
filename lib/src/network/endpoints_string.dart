@@ -6,6 +6,7 @@ class ApiEndpoints{
   static final endpointLogin = '${dotenv.env['ENDPOINT_LOGIN']}';
   static final endpointNewsFeed = '${dotenv.env['ENDPOINT_NEWS_FEED']}';
   static final endpointLogout = '${dotenv.env['ENDPOINT_LOGOUT']}';
+  static final endpointLike = '${dotenv.env['ENDPOINT_LIKE']}';
 
 
 

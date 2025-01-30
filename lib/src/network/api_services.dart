@@ -53,4 +53,22 @@ class ApiServices {
     return response;
   }
 
+  Future<Map<String, dynamic>?> postLike({required String tokenType,required String token,required String feedId}) async {
+    final response = await _restApiClient.post(
+        baseURL: ApiEndpoints.baseUrl,
+        endpoint: ApiEndpoints.endpointLike,
+        needEncode: false,
+        body: {
+          'feed_id': feedId,
+          'reaction_type': 'LIKE',
+          'action': 'deleteOrCreate',
+          'reactionSource': 'COMMUNITY',
+        },
+        additionalHeaders: {
+          'Authorization':'$tokenType $token'
+        }
+    );
+    return response;
+  }
+
 }
