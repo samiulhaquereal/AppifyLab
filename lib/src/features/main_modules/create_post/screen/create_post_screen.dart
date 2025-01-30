@@ -1,6 +1,6 @@
 import 'package:appifylabtask/src/config/import/imports.dart';
 
-class CreatePostScreen extends BaseWidget<FeedController>{
+class CreatePostScreen extends BaseWidget<CreatePostController>{
   CreatePostScreen({super.key});
 
   @override

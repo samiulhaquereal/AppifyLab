@@ -7,5 +7,9 @@ class DashboardBinding extends Bindings {
             () => DashboardScreenController(),
         fenix: true
     );
+    Get.lazyPut<NewsFeedController>(
+            () => NewsFeedController(),
+        fenix: true
+    );
   }
 }

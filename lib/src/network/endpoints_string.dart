@@ -4,5 +4,8 @@ class ApiEndpoints{
   static final baseUrlLogin = '${dotenv.env['LOGIN_BASE_URL']}';
   static final baseUrl = '${dotenv.env['BASE_URL']}';
   static final endpointLogin = '${dotenv.env['ENDPOINT_LOGIN']}';
+  static final endpointNewsFeed = '${dotenv.env['ENDPOINT_NEWS_FEED']}';
+
+
 
 }

@@ -61,3 +61,7 @@ export 'package:appifylabtask/src/network/endpoints_string.dart';
 export 'package:appifylabtask/src/core/utils/session_manager/session_manager.dart';
 export 'package:appifylabtask/src/features/main_modules/feed/controller/feed_controller.dart';
 export 'package:appifylabtask/src/features/main_modules/create_post/controller/create_post_controller.dart';
+export 'package:appifylabtask/src/features/main_modules/feed/screen/feed_screen.dart';
+export 'package:appifylabtask/src/core/utils/dateParse/formated_date.dart';
+export 'package:cached_network_image/cached_network_image.dart';
+export 'package:appifylabtask/src/model/post_model.dart';

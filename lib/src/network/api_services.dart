@@ -24,4 +24,21 @@ class ApiServices {
     return response;
   }
 
+  Future<Map<String, dynamic>?> getNewsFeed({required String tokenType,required String token}) async {
+    final response = await _restApiClient.post(
+        baseURL: ApiEndpoints.baseUrl,
+        endpoint: ApiEndpoints.endpointNewsFeed,
+        needEncode: false,
+        body: {
+          'community_id': '2914',
+          'space_id': '5883',
+          'more': '',
+        },
+      additionalHeaders: {
+        'Authorization':'$tokenType $token'
+      }
+    );
+    return response;
+  }
+
 }

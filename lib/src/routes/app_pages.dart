@@ -1,6 +1,7 @@
 import 'package:appifylabtask/src/config/import/imports.dart';
 import 'package:appifylabtask/src/features/authentication/login/bindings/login_binding.dart';
 import 'package:appifylabtask/src/features/authentication/login/screen/login_screen.dart';
+import 'package:appifylabtask/src/features/main_modules/feed/bindings/feed_binding.dart';
 
 class AppPages {
   AppPages._();

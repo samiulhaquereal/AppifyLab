@@ -4,7 +4,7 @@ class DashboardScreenController extends BaseController {
 
   RxInt myIndex = 0.obs;
   List<Widget> screenList = [
-    Center(child: Text('Community')),
+    FeedScreen(),
     Center(child: Text('Logout'))
   ];
 
